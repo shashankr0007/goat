@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>Carbon Footprint Calculator</display-name>
+
+    <!-- ===== Servlet Declarations ===== -->
+
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.carbon.servlet.HomeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CalculateServlet</servlet-name>
+        <servlet-class>com.carbon.servlet.CalculateServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>HistoryServlet</servlet-name>
+        <servlet-class>com.carbon.servlet.HistoryServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ClearHistoryServlet</servlet-name>
+        <servlet-class>com.carbon.servlet.ClearHistoryServlet</servlet-class>
+    </servlet>
+
+    <!-- ===== Servlet Mappings ===== -->
+
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CalculateServlet</servlet-name>
+        <url-pattern>/calculate</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>HistoryServlet</servlet-name>
+        <url-pattern>/history</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ClearHistoryServlet</servlet-name>
+        <url-pattern>/clearHistory</url-pattern>
+    </servlet-mapping>
+
+    <!-- ===== Session Config (Cookie-based) ===== -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+            <name>CARBONSESSIONID</name>
+            <http-only>true</http-only>
+        </cookie-config>
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+
+    <!-- ===== Welcome File ===== -->
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
+
+</web-app>
