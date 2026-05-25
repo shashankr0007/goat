@@ -1,6 +1,8 @@
 /* ============================================
    Carbon Footprint Calculator — Stylesheet
    ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -31,7 +33,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
     background: var(--gray-100);
     color: var(--text);
     min-height: 100vh;
@@ -59,7 +61,7 @@ body {
     font-size: 1.1rem;
     color: var(--green-600);
 }
-.nav-brand i { font-size: 1.2rem; }
+.nav-brand i { font-size: 1.3rem; }
 .nav-links { display: flex; gap: 1.5rem; }
 .nav-links a {
     text-decoration: none;
@@ -101,10 +103,8 @@ body {
     font-weight: 600;
     font-size: 0.9rem;
     margin-bottom: 1rem;
+    background: rgba(255,255,255,0.25);
 }
-.badge-low    { background: rgba(255,255,255,0.25); }
-.badge-medium { background: rgba(255,255,255,0.25); }
-.badge-high   { background: rgba(255,255,255,0.25); }
 
 .benchmarks {
     display: flex;
@@ -138,7 +138,7 @@ body {
     padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--gray-200);
 }
-.card-header i { font-size: 1.1rem; color: var(--green-600); }
+.card-header i { font-size: 1.2rem; color: var(--green-600); }
 .card-header h2 { font-size: 1rem; font-weight: 600; }
 .card-desc { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem; }
 
@@ -164,6 +164,7 @@ body {
     background: var(--white);
     transition: border-color 0.15s;
     outline: none;
+    font-family: inherit;
 }
 .form-group input:focus,
 .form-group select:focus { border-color: var(--green-400); box-shadow: 0 0 0 3px rgba(99,153,34,0.12); }
@@ -192,6 +193,7 @@ body {
 .diet-option input:checked + .diet-box {
     border-color: var(--green-400);
     background: var(--green-50);
+    transform: scale(1.03);
 }
 .diet-option input:checked + .diet-box i { color: var(--green-600); }
 .diet-option:hover .diet-box { border-color: var(--green-100); }
@@ -213,6 +215,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: background 0.15s;
+    font-family: inherit;
 }
 .btn-submit:hover { background: var(--green-800); }
 
@@ -245,6 +248,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.15s;
+    font-family: inherit;
 }
 .btn-danger:hover { background: #fdd; }
 
@@ -277,7 +281,7 @@ body {
 .bk-energy { background: var(--amber-50);  border: 1px solid #FAC775; }
 .bk-diet   { background: var(--coral-50);  border: 1px solid #F5C4B3; }
 
-.bk-icon   { font-size: 1.5rem; margin-bottom: 8px; }
+.bk-icon   { font-size: 1.8rem; margin-bottom: 8px; }
 .bk-travel .bk-icon { color: var(--teal-600); }
 .bk-energy .bk-icon { color: var(--amber-400); }
 .bk-diet   .bk-icon { color: var(--coral-400); }
@@ -298,7 +302,7 @@ body {
     font-size: 0.88rem;
     margin-bottom: 6px;
 }
-.bar-name  { font-weight: 600; }
+.bar-name  { font-weight: 600; display: flex; align-items: center; gap: 6px; }
 .bar-value { color: var(--text-muted); }
 .bar-track {
     height: 10px;
@@ -335,7 +339,7 @@ body {
 .tips-card { background: var(--green-50); border-color: var(--green-100); }
 .tips-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .tips-list li { font-size: 0.92rem; display: flex; gap: 10px; align-items: flex-start; }
-.tips-list li i { color: var(--green-600); margin-top: 2px; flex-shrink: 0; }
+.tips-list li i { color: var(--green-600); margin-top: 2px; flex-shrink: 0; font-size: 1.1rem; }
 
 /* ===== HISTORY ===== */
 .history-info {
@@ -397,7 +401,7 @@ body {
     padding: 3rem 2rem;
     color: var(--text-muted);
 }
-.empty-state i  { color: var(--gray-200); margin-bottom: 1rem; }
+.empty-state i  { color: var(--gray-200); margin-bottom: 1rem; display: block; font-size: 3rem; }
 .empty-state h2 { font-size: 1.2rem; color: var(--text); margin-bottom: 0.5rem; }
 .empty-state p  { font-size: 0.9rem; }
 
